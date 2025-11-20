@@ -44,4 +44,80 @@ void main() {
   print(kelas);
   print(kelas['nama']);
   print(kelas['kelas']);
+
+  // operator
+  int a, b;
+  a = 9;
+  b = 7;
+  print("a = " + a.toString());
+  print("b = " + b.toString());
+
+  print(a + b);
+  print(a - b);
+  print(a / b);
+  print(a * b);
+  print(a > b);
+  print(a < b);
+  print(a >= b);
+  print(a <= b);
+
+  // conditional
+  print("Conditional");
+  var nilai;
+  nilai = 80;
+
+  if(nilai >= 80){
+    print("A");
+  }else if(nilai <= 80 && nilai >= 50){
+    print("B");
+  }else{
+    print("Tidak Lulus");
+  }
+
+  print("---------------------------");
+  nilai >= 80 ? print("A"):print("Tidak A");
+
+  // Function
+  print("Function");
+
+  hitungNilai();
+  hitungNilai1(75, 90);
+  var p = hitungNilai1(2, 50);
+  print(p);
+  var x = hitungNilai2(matkul1: 50, matkul2: 2);
+  print(x);
+  var y = hitungNilai3(79, 100);
 }
+
+  // Function
+  hitungNilai(){
+    print("hitung nilai");
+  }
+
+  // positional argument
+  hitungNilai1(matkul1, matkul2, [matkul3]) {
+  var nilaiAkhir;
+  if(matkul3 != null){
+    nilaiAkhir = matkul1 / matkul2 + matkul3;
+  }else{
+    nilaiAkhir = matkul1 / matkul2;
+  }
+  return nilaiAkhir;
+  }
+
+  // name argument
+  hitungNilai2({matkul1, matkul2}) {
+  var nilaiAkhir;
+  if (matkul2 != null) {
+    nilaiAkhir = matkul1 / matkul2;
+  } else {
+    nilaiAkhir = matkul1;
+  }
+  return nilaiAkhir;
+  }
+
+  // void
+  void hitungNilai3(matkul1, matkul2){
+  var nilaiAkhir = matkul1 + matkul2;
+  print(nilaiAkhir);
+  }
