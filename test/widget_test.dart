@@ -4,7 +4,7 @@ void main() {
   var mahasiswa = "Fuad";
   var umur = "19";
 
-  print(mahasiswa + "_Umur = " + umur.toString());
+  print("${mahasiswa}_Umur = $umur");
 
   // String
   String mahasiswaString;
@@ -49,8 +49,8 @@ void main() {
   int a, b;
   a = 9;
   b = 7;
-  print("a = " + a.toString());
-  print("b = " + b.toString());
+  print("a = $a");
+  print("b = $b");
 
   print(a + b);
   print(a - b);
@@ -63,7 +63,7 @@ void main() {
 
   // conditional
   print("Conditional");
-  var nilai;
+  int nilai;
   nilai = 80;
 
   if(nilai >= 80){
@@ -90,12 +90,12 @@ void main() {
 }
 
   // Function
-  hitungNilai(){
+  void hitungNilai(){
     print("hitung nilai");
   }
 
   // positional argument
-  hitungNilai1(matkul1, matkul2, [matkul3]) {
+  dynamic hitungNilai1(matkul1, matkul2, [matkul3]) {
   var nilaiAkhir;
   if(matkul3 != null){
     nilaiAkhir = matkul1 / matkul2 + matkul3;
@@ -106,7 +106,7 @@ void main() {
   }
 
   // name argument
-  hitungNilai2({matkul1, matkul2}) {
+  dynamic hitungNilai2({matkul1, matkul2}) {
   var nilaiAkhir;
   if (matkul2 != null) {
     nilaiAkhir = matkul1 / matkul2;
